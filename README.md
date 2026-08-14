@@ -165,6 +165,8 @@ Because the dataset covers only one calendar year, I treat these patterns as sea
 
 ## Assumptions
 
+For analytical tasks, rows with duplicate IDs, malformed consumer IDs, invalid dates, invalid amounts, future dates, invalid transaction types, or DR/CR sign inconsistencies were removed before behavioural analysis.
+
 For debit-versus-credit transaction volume, I use the absolute value of transaction amounts. This prevents negative debit values from cancelling positive credit values and makes the comparison interpretable as total transaction volume.
 
 For analytical tasks, rows with duplicate IDs, malformed consumer IDs, invalid dates, invalid amounts, future dates, invalid transaction types, or DR/CR sign inconsistencies were removed before behavioural analysis.
