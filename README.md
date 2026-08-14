@@ -1,5 +1,3 @@
-# catalysk-assessment-mitee
-
 # Catalysk Take-Home Assessment
 
 This repository contains my solution for the Catalysk internship take-home assessment. The project explores a dataset of financial transactions, performs data-quality validation, and analyzes consumer behaviour, outliers, and merchant-level transaction patterns.
