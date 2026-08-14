@@ -165,11 +165,12 @@ Because the dataset covers only one calendar year, I treat these patterns as sea
 
 ## Assumptions
 
-For analytical tasks, rows with duplicate IDs, malformed consumer IDs, invalid dates, invalid amounts, future dates, invalid transaction types, or DR/CR sign inconsistencies were removed before behavioural analysis.
+For debit-versus-credit transaction volume, I use the absolute value of transaction amounts. This prevents negative debit 
+values from cancelling positive credit values and makes the comparison interpretable as total transaction volume.
 
-For debit-versus-credit transaction volume, I use the absolute value of transaction amounts. This prevents negative debit values from cancelling positive credit values and makes the comparison interpretable as total transaction volume.
+For analytical tasks, rows with malformed consumer IDs, invalid dates, invalid amounts, future dates, invalid transaction types, or DR/CR sign inconsistencies were removed before behavioural analysis.
 
-For analytical tasks, rows with duplicate IDs, malformed consumer IDs, invalid dates, invalid amounts, future dates, invalid transaction types, or DR/CR sign inconsistencies were removed before behavioural analysis.
+For duplicated transaction IDs, the first occurrence was retained for downstream analysis and subsequent duplicates were removed.
 
 Merchant/category names were extracted from the middle component of `full_narration`, which generally follows a pattern similar to:
 
